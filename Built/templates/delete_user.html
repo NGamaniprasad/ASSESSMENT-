@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Registration</title>
+    <link href="{% static 'delete.css' %}" rel="stylesheet">
+</head>
+<body>
+    <h1>Are you sure you want to delete the registration for {{ user.name }}?</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Yes, delete</button>
+    </form>
+
+    <br>
+    <a href="{% url 'view_users' %}">Cancel</a>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Registration</title>
+    <link href="{% static 'update.css' %}" rel="stylesheet">
+</head>
+<body>
+    <h1>Update Registration: {{ user.name }}</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update</button>
+    </form>
+
+    <br>
+    <a href="{% url 'view_users' %}">Back to Registration List</a>
+</body>
+</html>

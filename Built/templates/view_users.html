@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Registrations</title>
+    <link href="{% static 'view.css' %}" rel="stylesheet">
+</head>
+<body>
+    <h1>List of Registrations</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Date of Birth</th>
+                <th>Phone Number</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for registration in registrations %}
+                <tr>
+                    <td>{{ registration.name }}</td>
+                    <td>{{ registration.email }}</td>
+                    <td>{{ registration.date_of_birth }}</td>
+                    <td>{{ registration.phone_number }}</td>
+                    <td>
+                        <a href="{% url 'update_user' registration.email %}">Update</a> |
+                        <a href="{% url 'delete_user' registration.email %}">Delete</a>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="5">No registrations available.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br>
+    <a href="{% url 'register_user' %}">Create a New Registration</a>
+</body>
+</html>

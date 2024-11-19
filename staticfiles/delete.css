@@ -1,0 +1,92 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 24px;
+    color: #dc3545;  /* Red color to indicate a warning */
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    background-color: #dc3545;  /* Red background to highlight deletion */
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c82333;  /* Darker red on hover */
+}
+
+/* Link Styling */
+a {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Form Styling */
+form {
+    display: inline-block;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form button {
+    width: 200px;
+}
+
+/* Spacing for Cancel Link */
+a {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+    }
+}
