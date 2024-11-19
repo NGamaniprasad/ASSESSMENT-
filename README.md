@@ -1,3 +1,4 @@
+#STEPS TO RUN THIS PROJECT
 #Open Any ide like pycharm or vs code
 #Open folder You created for project
 #Open terminal 
